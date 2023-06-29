@@ -5,14 +5,20 @@ import (
 	"net/url"
 
 	"github.com/veo/vscan/brute"
+	"github.com/veo/vscan/pocs_go/HIKVISION"
 	"github.com/veo/vscan/pocs_go/Springboot"
 	"github.com/veo/vscan/pocs_go/ThinkPHP"
+	"github.com/veo/vscan/pocs_go/apusic"
 	"github.com/veo/vscan/pocs_go/confluence"
 	"github.com/veo/vscan/pocs_go/f5"
 	"github.com/veo/vscan/pocs_go/fastjson"
+	"github.com/veo/vscan/pocs_go/fineReport"
 	"github.com/veo/vscan/pocs_go/gitlab"
+	"github.com/veo/vscan/pocs_go/haofeng"
+	"github.com/veo/vscan/pocs_go/hongfanioffice"
 	"github.com/veo/vscan/pocs_go/jboss"
 	"github.com/veo/vscan/pocs_go/jenkins"
+	"github.com/veo/vscan/pocs_go/jinheOA"
 	"github.com/veo/vscan/pocs_go/landray"
 	"github.com/veo/vscan/pocs_go/log4j"
 	"github.com/veo/vscan/pocs_go/mcms"
@@ -23,7 +29,9 @@ import (
 	"github.com/veo/vscan/pocs_go/sunlogin"
 	"github.com/veo/vscan/pocs_go/tomcat"
 	"github.com/veo/vscan/pocs_go/tongda"
+	"github.com/veo/vscan/pocs_go/weaver"
 	"github.com/veo/vscan/pocs_go/weblogic"
+	"github.com/veo/vscan/pocs_go/yonyou"
 	"github.com/veo/vscan/pocs_go/zabbix"
 	"github.com/veo/vscan/pocs_go/zentao"
 )
@@ -130,7 +138,7 @@ func POCcheck(wappalyzertechnologies []string, URL string, finalURL string, chec
 			if phpunit.CVE_2017_9841(URL) {
 				technologies = append(technologies, "GoPOC_phpunit|CVE_2017_9841")
 			}
-		case "seeyon":
+		case "yonyou-seeyon-oa":
 			if seeyon.SeeyonFastjson(URL) {
 				technologies = append(technologies, "GoPOC_seeyon|SeeyonFastjson")
 			}
@@ -163,6 +171,18 @@ func POCcheck(wappalyzertechnologies []string, URL string, finalURL string, chec
 			}
 			if seeyon.BackdoorScan(URL) {
 				technologies = append(technologies, "GoPOC_seeyon|Backdoor")
+			}
+			if seeyon.AuthorItyService(URL) {
+				technologies = append(technologies, "GoPOC_seeyon|AuthorItyService")
+			}
+			if seeyon.GetAjaxDataServlet(URL) {
+				technologies = append(technologies, "GoPOC_seeyon|GetAjaxDataServlet")
+			}
+			if seeyon.ConfigInfo(URL) {
+				technologies = append(technologies, "GoPOC_seeyon|ConfigInof")
+			}
+			if seeyon.TestSql(URL) {
+				technologies = append(technologies, "GoPOC_seeyon|TestSql")
 			}
 		case "登录页面":
 			username, password, loginurl := brute.Admin_brute(finalURL)
@@ -238,7 +258,103 @@ func POCcheck(wappalyzertechnologies []string, URL string, finalURL string, chec
 			if mcms.Front_Sql_inject(URL) {
 				technologies = append(technologies, "GoPOC_Mcms|Mcms_Front_Sql_inject")
 			}
+		case "yonyou-fe":
+			if yonyou.TemplateOfTaohong_manager(URL) {
+				technologies = append(technologies, "GoPOC_yonyou|TemplateOfTaohong_manager")
+			}
+		case "yonyou-uclient":
+			if yonyou.BshServlet(URL) {
+				technologies = append(technologies, "GoPOC_yonyou|BshServlet")
+			}
+			if yonyou.Uapws(URL) {
+				technologies = append(technologies, "GoPOC_yonyou|uapws")
+			}
+			if yonyou.NCFindWeb(URL) {
+				technologies = append(technologies, "GoPOC_yonyou|NCFindWeb")
+			}
+			if yonyou.FileReceiveServlet(URL) {
+				technologies = append(technologies, "GoPOC_yonyou|FileReceiveServlet")
+			}
+		case "YONYOU NC":
+			if yonyou.NCFindWeb(URL) {
+				technologies = append(technologies, "GoPOC_yonyou|NCFindWeb")
+			}
+			if yonyou.FileReceiveServlet(URL) {
+				technologies = append(technologies, "GoPOC_yonyou|FileReceiveServlet")
+			}
+		case "yonyou-grp-u8":
+			if yonyou.ProxySql(URL) {
+				technologies = append(technologies, "GoPOC_yonyou|ProxySql")
+			}
+			if yonyou.Uapws(URL) {
+				technologies = append(technologies, "GoPOC_yonyou|uapws")
+			}
+			if yonyou.UploadFileData(URL) {
+				technologies = append(technologies, "GoPOC_yonyou|UploadFileData")
+			}
+			if yonyou.FileReceiveServlet(URL) {
+				technologies = append(technologies, "GoPOC_yonyou|FileReceiveServlet")
+			}
+		case "泛微 OA":
+			if weaver.LnFileDownload(URL) {
+				technologies = append(technologies, "GoPOC_yonyou|LnFileDownload")
+			}
+			if weaver.GetSelectAllId(URL) {
+				technologies = append(technologies, "GoPOC_yonyou|GetSelectAllId")
+			}
+			if weaver.LoginSSOSql(URL) {
+				technologies = append(technologies, "GoPOC_yonyou|LoginSSOSql")
+			}
+			if weaver.GetSqlData(URL) {
+				technologies = append(technologies, "GoPOC_yonyou|GetSqlData")
+			}
+			if weaver.UsersData(URL) {
+				technologies = append(technologies, "GoPOC_yonyou|UsersData")
+			}
+		case "帆软数据决策系统":
+			if fineReport.CNVD_2018_04757(URL) {
+				technologies = append(technologies, "GoPOC_fineReport|CNVD-2018-04757")
+			}
+			if fineReport.Design_save_svg(URL) {
+				technologies = append(technologies, "GoPOC_fineReport|Design_save_svg")
+			}
+		case "金蝶云星空":
+			if apusic.Server_file(URL) {
+				technologies = append(technologies, "GoPOC_apusic|Server_file")
+			}
+			if apusic.Win_server_file(URL) {
+				technologies = append(technologies, "GoPOC_apusic|Win_server_file")
+			}
+			if apusic.Linux_server_file(URL) {
+				technologies = append(technologies, "GoPOC_apusic|Linux_server_file")
+			}
+		case "红帆ioffice":
+			if hongfanioffice.IoFileExport(URL) {
+				technologies = append(technologies, "GoPOC_hongfan_ioffice|ioFileExport")
+			}
+		case "金和协同管理平台":
+			if jinheOA.C6download(URL) {
+				technologies = append(technologies, "GoPOC_jinheOA|C6download")
+			}
+		case "hikvision-ivms":
+			if HIKVISION.CNVD_2021_14544(URL) {
+				technologies = append(technologies, "GoPOC_HIKVISION|CNVD_2021_14544")
+			}
+			if HIKVISION.Downdb(URL) {
+				technologies = append(technologies, "GoPOC_HIKVISION|Downdb")
+			}
+			if HIKVISION.Userxml(URL) {
+				technologies = append(technologies, "GoPOC_HIKVISION|Userxml")
+			}
+			if HIKVISION.DATA(URL) {
+				technologies = append(technologies, "GoPOC_HIKVISION|DATA")
+			}
+		case "皓峰通讯-智能防火墙":
+			if haofeng.Setdomain(URL) {
+				technologies = append(technologies, "GoPOC_haofeng|Setdomain")
+			}
 		}
+
 		if checklog4j {
 			if log4j.Check(URL, finalURL) {
 				technologies = append(technologies, "GoPOC_log4j|JNDI RCE")

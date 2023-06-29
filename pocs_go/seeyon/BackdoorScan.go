@@ -16,7 +16,7 @@ import (
 //peiqi10086.jsp 蚁剑密码: peiqi
 
 func BackdoorScan(u string) bool {
-	backurls := []string{"/seeyon/test233.jsp", "/seeyon/SeeyonUpdate.jspx", "/seeyon/SeeyonUpdate1.jspx", "/seeyon/test123456.jsp", "/seeyon/test1234567.jsp", "/seeyon/qwerasdf.jsp", "/seeyon/qwer960452.jsp", "/seeyon/ping123456.jsp", "/seeyon/common/designer/pageLayout/test233.jsp", "/seeyon/common/designer/pageLayout/test10086.jsp", "/seeyon/common/designer/pageLayout/a234.jspx", "/seeyon/common/designer/pageLayout/peiqi10086.jsp"}
+	backurls := []string{"/seeyon/test233.jsp", "/seeyon/SeeyonUpdate.jspx", "/seeyon/SeeyonUpdate1.jspx", "/seeyon/test123456.jsp", "/seeyon/test1234567.jsp", "/seeyon/qwerasdf.jsp", "/seeyon/qwer960452.jsp", "/seeyon/ping123456.jsp", "/seeyon/common/designer/pageLayout/test233.jsp", "/seeyon/common/designer/pageLayout/test10086.jsp", "/seeyon/common/designer/pageLayout/a234.jspx", "/seeyon/common/designer/pageLayout/peiqi10086.jsp","/seeyon/testtesta.jsp"}
 	var vuln = false
 	for _, backurl := range backurls {
 		if req, err := pkg.HttpRequset(u+backurl, "GET", "", false, nil); err == nil {
