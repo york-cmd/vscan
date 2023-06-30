@@ -2,6 +2,7 @@ package pocs_go
 
 import (
 	"fmt"
+	"github.com/veo/vscan/pocs_go/chanjetTplus"
 	"net/url"
 
 	"github.com/veo/vscan/brute"
@@ -352,6 +353,10 @@ func POCcheck(wappalyzertechnologies []string, URL string, finalURL string, chec
 		case "皓峰通讯-智能防火墙":
 			if haofeng.Setdomain(URL) {
 				technologies = append(technologies, "GoPOC_haofeng|Setdomain")
+			}
+		case "chanjet-tplus":
+			if chanjetTplus.QVD_2023_13612_SQL(URL) {
+				technologies = append(technologies, "GoPOC_畅捷通T+|Setdomain")
 			}
 		}
 
