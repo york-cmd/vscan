@@ -48,4 +48,10 @@ pocs_yml:
 xrayV2 all 354 pocs
 
 Nuclei 1700+ pocs
+
+
+更新记录：
+2023-06-30
+    1.QVD-2023-13612 用友畅捷通T SQL注入
+    
 ```

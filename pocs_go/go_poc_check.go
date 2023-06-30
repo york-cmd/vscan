@@ -356,7 +356,7 @@ func POCcheck(wappalyzertechnologies []string, URL string, finalURL string, chec
 			}
 		case "chanjet-tplus":
 			if chanjetTplus.QVD_2023_13612_SQL(URL) {
-				technologies = append(technologies, "GoPOC_畅捷通T+|Setdomain")
+				technologies = append(technologies, "GoPOC_畅捷通T+|QVD_2023_13612_SQL")
 			}
 		}
 
