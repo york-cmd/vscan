@@ -362,6 +362,9 @@ func POCcheck(wappalyzertechnologies []string, URL string, finalURL string, chec
 			if HIKVISION.Hikvision_api_files_rce(URL) {
 				technologies = append(technologies, "GoPOC_api_file_uplaod_rce|海康威视综合安防管理平台文件上传漏洞|复现参考链接：https://mp.weixin.qq.com/s/4An-tUll11dBVozyYKxTfg")
 			}
+			if HIKVISION.Hikvision_iVMS_files_rce(URL) {
+				technologies = append(technologies, "GoPOC_api_ivms_file_uplaod_rce|海康威视综合安防管理平台文件上传漏洞|复现参考链接：https://mp.weixin.qq.com/s/Wveo0X3857mBWFzNOcJHJw")
+			}
 		}
 		if checklog4j {
 			if log4j.Check(URL, finalURL) {
