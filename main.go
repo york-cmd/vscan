@@ -7,6 +7,7 @@ import (
 )
 
 func main() {
+	//HIKVISION.Hikvision_iVMS_files_rce("http://127.0.0.1")
 	options := naabuRunner.ParseOptions()
 	if runtime.GOOS == "windows" {
 		options.NoColor = true
@@ -25,4 +26,5 @@ func main() {
 	if err != nil {
 		gologger.Fatal().Msgf("Could not run httpRunner: %s\n", err)
 	}
+
 }
