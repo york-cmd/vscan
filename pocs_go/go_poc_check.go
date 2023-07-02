@@ -358,7 +358,7 @@ func POCcheck(wappalyzertechnologies []string, URL string, finalURL string, chec
 			if chanjetTplus.QVD_2023_13612_SQL(URL) {
 				technologies = append(technologies, "GoPOC_畅捷通T+|QVD_2023_13612_SQL")
 			}
-		case "海康威视综合安防管理平台":
+		case "海康威视综合安防管理平台", "海康威视综合安防平台":
 			if HIKVISION.Hikvision_api_files_rce(URL) {
 				technologies = append(technologies, "GoPOC_api_file_uplaod_rce|海康威视综合安防管理平台文件上传漏洞|复现参考链接：https://mp.weixin.qq.com/s/4An-tUll11dBVozyYKxTfg")
 			}
