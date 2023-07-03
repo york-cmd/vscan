@@ -4614,6 +4614,21 @@
 		"method": "keyword",
 		"location": "body",
 		"keyword": ["dist/jquery.js","home/locationIndex.action"]
+	},{
+		"cms": "海康威视综合安防平台",
+		"method": "keyword",
+		"location": "body",
+		"keyword": ["home/licenseUpload.action"]
+	},{
+		"cms": "海康威视综合安防平台",
+		"method": "keyword",
+		"location": "body",
+		"keyword": ["home/firstUseSet.action"]
+	},{
+		"cms": "海康威视综合安防平台",
+		"method": "keyword",
+		"location": "body",
+		"keyword": ["/views/home/file/installPackage.rar"]
 	}, {
 		"cms": "海纳CMS-HituxCMS",
 		"method": "keyword",

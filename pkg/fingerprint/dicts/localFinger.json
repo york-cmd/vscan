@@ -15653,11 +15653,6 @@
     "cms": "海康威视综合安防平台",
     "method": "keyword",
     "location": "body",
-    "keyword": ["home/licenseUpload.action","home/firstUseSet.action","/views/home/file/installPackage.rar"]
-  },{
-    "cms": "海康威视综合安防平台",
-    "method": "keyword",
-    "location": "body",
     "keyword": ["home/licenseUpload.action"]
   },{
     "cms": "海康威视综合安防平台",
