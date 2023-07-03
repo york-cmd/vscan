@@ -1,3 +1,9 @@
+/officeserver.jsp
+/officeserverservlet
+/htmlofficeservlet
+/officeserverservlet
+/adminer
+/pma
 /1.7z
 /1.asp
 /1.aspx

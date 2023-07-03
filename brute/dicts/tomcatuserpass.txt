@@ -1,10 +1,13 @@
 admin,
+admin,123456
+tomcat,tomcat
+root,root
+manager,manager
 root,
 test,test
 root,admin
 admin,admin
 root,123456
-admin,123456
 Tomcat-manager,manager
 admin,admanager
 admin,admin
