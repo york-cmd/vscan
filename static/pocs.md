@@ -54,6 +54,9 @@ Nuclei 1700+ pocs
 
 1.2023-06-30 QVD-2023-13612 用友畅捷通T SQL注入 [参考链接](https://github.com/Sweelg/QVD-2023-13612_TPlus-SQLvuln)
 2.2023-07-01 海康威视isecure center 综合安防管理平台存在任意文件上传漏洞 [参考链接](https://mp.weixin.qq.com/s/4An-tUll11dBVozyYKxTfg)
-3.2023-07-01 海康威视iVMS综合安防系统任意文件上传漏洞 [参考链接](https://mp.weixin.qq.com/s/Wveo0X3857mBWFzNOcJHJw)
-    
+3.2023-07-02 海康威视iVMS综合安防系统任意文件上传漏洞 [参考链接](https://mp.weixin.qq.com/s/Wveo0X3857mBWFzNOcJHJw)
+4.2023-07-03 泛微OA QVD_2023_5012 SQL注入 [参考链接](https://mp.weixin.qq.com/s/_NzNyWjMrx4DhMtrYGZlVQ)
+5.2023-07-03 泛微OA CVE_20223_2647 文件上传 [参考链接](https://mp.weixin.qq.com/s/4vJvjplAXE2TjOzJB0hMfQ)
+
+
 ```

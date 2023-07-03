@@ -296,7 +296,7 @@ func POCcheck(wappalyzertechnologies []string, URL string, finalURL string, chec
 			if yonyou.FileReceiveServlet(URL) {
 				technologies = append(technologies, "GoPOC_yonyou|FileReceiveServlet")
 			}
-		case "泛微 OA", "ecology-oa", "ecology":
+		case "ecology-oa", "泛微 OA":
 			if weaver.LnFileDownload(URL) {
 				technologies = append(technologies, "GoPOC_泛微 OA|LnFileDownload")
 			}
@@ -314,6 +314,11 @@ func POCcheck(wappalyzertechnologies []string, URL string, finalURL string, chec
 			}
 			if weaver.QVD_2023_5012(URL) {
 				technologies = append(technologies, "GoPOC_泛微 OA SQL|QVD_2023_5012|复现参考链接：https://mp.weixin.qq.com/s/_NzNyWjMrx4DhMtrYGZlVQ")
+			}
+
+		case "ecology泛微e-office":
+			if weaver.CVE_20223_2647(URL) {
+				technologies = append(technologies, "GoPOC_泛微 OA SQL|CVE_20223_2647|复现参考链接：https://mp.weixin.qq.com/s/4vJvjplAXE2TjOzJB0hMfQ")
 			}
 		case "帆软数据决策系统":
 			if fineReport.CNVD_2018_04757(URL) {
