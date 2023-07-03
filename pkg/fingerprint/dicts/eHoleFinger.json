@@ -4613,7 +4613,7 @@
 		"cms": "海康威视综合安防平台",
 		"method": "keyword",
 		"location": "body",
-		"keyword": ["dist/jquery.js","home/locationIndex.action"]
+		"keyword": ["dist/jquery.js","home/locationIndex.action","home/licenseUpload.action","home/firstUseSet.action"]
 	}, {
 		"cms": "海纳CMS-HituxCMS",
 		"method": "keyword",

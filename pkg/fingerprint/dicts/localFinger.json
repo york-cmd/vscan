@@ -15653,7 +15653,7 @@
     "cms": "海康威视综合安防平台",
     "method": "keyword",
     "location": "body",
-    "keyword": ["/home/licenseUpload.action?errorMsg=","/home/firstUseSet.action","home/licenseUpload.action"]
+    "keyword": ["home/licenseUpload.action","home/firstUseSet.action","/views/home/file/installPackage.rar"]
   },{
     "cms": "铭飞MCms",
     "method": "keyword",
