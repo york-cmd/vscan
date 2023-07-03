@@ -4618,6 +4618,11 @@
 		"cms": "海康威视综合安防平台",
 		"method": "keyword",
 		"location": "body",
+		"keyword": ["home/index.action","home/locationIndex.action"]
+	},{
+		"cms": "海康威视综合安防平台",
+		"method": "keyword",
+		"location": "body",
 		"keyword": ["home/licenseUpload.action"]
 	},{
 		"cms": "海康威视综合安防平台",
