@@ -296,21 +296,24 @@ func POCcheck(wappalyzertechnologies []string, URL string, finalURL string, chec
 			if yonyou.FileReceiveServlet(URL) {
 				technologies = append(technologies, "GoPOC_yonyou|FileReceiveServlet")
 			}
-		case "泛微 OA":
+		case "泛微 OA", "ecology-oa", "ecology":
 			if weaver.LnFileDownload(URL) {
-				technologies = append(technologies, "GoPOC_yonyou|LnFileDownload")
+				technologies = append(technologies, "GoPOC_泛微 OA|LnFileDownload")
 			}
 			if weaver.GetSelectAllId(URL) {
-				technologies = append(technologies, "GoPOC_yonyou|GetSelectAllId")
+				technologies = append(technologies, "GoPOC_泛微 OA|GetSelectAllId")
 			}
 			if weaver.LoginSSOSql(URL) {
-				technologies = append(technologies, "GoPOC_yonyou|LoginSSOSql")
+				technologies = append(technologies, "GoPOC_泛微 OA|LoginSSOSql")
 			}
 			if weaver.GetSqlData(URL) {
-				technologies = append(technologies, "GoPOC_yonyou|GetSqlData")
+				technologies = append(technologies, "GoPOC_泛微 OA|GetSqlData")
 			}
 			if weaver.UsersData(URL) {
-				technologies = append(technologies, "GoPOC_yonyou|UsersData")
+				technologies = append(technologies, "GoPOC_泛微 OA|UsersData")
+			}
+			if weaver.QVD_2023_5012(URL) {
+				technologies = append(technologies, "GoPOC_泛微 OA SQL|QVD_2023_5012|复现参考链接：https://mp.weixin.qq.com/s/_NzNyWjMrx4DhMtrYGZlVQ")
 			}
 		case "帆软数据决策系统":
 			if fineReport.CNVD_2018_04757(URL) {
@@ -337,7 +340,7 @@ func POCcheck(wappalyzertechnologies []string, URL string, finalURL string, chec
 			if jinheOA.C6download(URL) {
 				technologies = append(technologies, "GoPOC_jinheOA|C6download")
 			}
-		case "hikvision-ivms":
+		case "hikvision-ivms", "海康威视综合安防管理平台", "海康威视综合安防平台":
 			if HIKVISION.CNVD_2021_14544(URL) {
 				technologies = append(technologies, "GoPOC_HIKVISION|CNVD_2021_14544")
 			}
@@ -350,6 +353,12 @@ func POCcheck(wappalyzertechnologies []string, URL string, finalURL string, chec
 			if HIKVISION.DATA(URL) {
 				technologies = append(technologies, "GoPOC_HIKVISION|DATA")
 			}
+			if HIKVISION.Hikvision_api_files_rce(URL) {
+				technologies = append(technologies, "GoPOC_api_file_uplaod_rce|海康威视综合安防管理平台文件上传漏洞|复现参考链接：https://mp.weixin.qq.com/s/4An-tUll11dBVozyYKxTfg")
+			}
+			if HIKVISION.Hikvision_iVMS_files_rce(URL) {
+				technologies = append(technologies, "GoPOC_api_ivms_file_uplaod_rce|海康威视综合安防管理平台文件上传漏洞|复现参考链接：https://mp.weixin.qq.com/s/Wveo0X3857mBWFzNOcJHJw")
+			}
 		case "皓峰通讯-智能防火墙":
 			if haofeng.Setdomain(URL) {
 				technologies = append(technologies, "GoPOC_haofeng|Setdomain")
@@ -358,13 +367,7 @@ func POCcheck(wappalyzertechnologies []string, URL string, finalURL string, chec
 			if chanjetTplus.QVD_2023_13612_SQL(URL) {
 				technologies = append(technologies, "GoPOC_畅捷通T+|QVD_2023_13612_SQL")
 			}
-		case "海康威视综合安防管理平台", "海康威视综合安防平台":
-			if HIKVISION.Hikvision_api_files_rce(URL) {
-				technologies = append(technologies, "GoPOC_api_file_uplaod_rce|海康威视综合安防管理平台文件上传漏洞|复现参考链接：https://mp.weixin.qq.com/s/4An-tUll11dBVozyYKxTfg")
-			}
-			if HIKVISION.Hikvision_iVMS_files_rce(URL) {
-				technologies = append(technologies, "GoPOC_api_ivms_file_uplaod_rce|海康威视综合安防管理平台文件上传漏洞|复现参考链接：https://mp.weixin.qq.com/s/Wveo0X3857mBWFzNOcJHJw")
-			}
+
 		}
 		if checklog4j {
 			if log4j.Check(URL, finalURL) {
