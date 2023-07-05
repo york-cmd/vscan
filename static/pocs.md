@@ -57,6 +57,6 @@ Nuclei 1700+ pocs
 3.2023-07-02 海康威视iVMS综合安防系统任意文件上传漏洞 [参考链接](https://mp.weixin.qq.com/s/Wveo0X3857mBWFzNOcJHJw)
 4.2023-07-03 泛微OA QVD_2023_5012 SQL注入 [参考链接](https://mp.weixin.qq.com/s/_NzNyWjMrx4DhMtrYGZlVQ)
 5.2023-07-03 泛微OA CVE_20223_2647 文件上传 [参考链接](https://mp.weixin.qq.com/s/4vJvjplAXE2TjOzJB0hMfQ)
-
+6.2023-07-05 nginxWebUI runCmd命令执行漏洞 [参考链接](https://mp.weixin.qq.com/s/5N89pINE9SmpMFUoVJlgbA)
 
 ```

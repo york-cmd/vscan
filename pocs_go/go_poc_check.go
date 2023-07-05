@@ -3,6 +3,7 @@ package pocs_go
 import (
 	"fmt"
 	"github.com/veo/vscan/pocs_go/chanjetTplus"
+	"github.com/veo/vscan/pocs_go/nginx"
 	"net/url"
 
 	"github.com/veo/vscan/brute"
@@ -372,7 +373,10 @@ func POCcheck(wappalyzertechnologies []string, URL string, finalURL string, chec
 			if chanjetTplus.QVD_2023_13612_SQL(URL) {
 				technologies = append(technologies, "GoPOC_畅捷通T+|QVD_2023_13612_SQL")
 			}
-
+		case "nginxWebUI":
+			if nginx.NginxWebUI_runCmd_rce(URL) {
+				technologies = append(technologies, "GoPOC_NginxWebUI_runCmd_rce|参考链接：https://mp.weixin.qq.com/s/5N89pINE9SmpMFUoVJlgbA")
+			}
 		}
 		if checklog4j {
 			if log4j.Check(URL, finalURL) {
