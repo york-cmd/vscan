@@ -86,6 +86,26 @@ func addfingerprintsnormal(payload string, technologies []string, req *pkg.Respo
 		technologies = append(technologies, "phpunit")
 	case "/wp-config.php.bak", "/wp-content/debug.log", "/wp-content/uploads/dump.sql", "/wp-json/", "/wp-json/wp/v2/users", "/.wp-config.php.swp":
 		technologies = append(technologies, "WordPress")
+	case "/actuator;/env;.css", "/api/actuator;/env;.css", "/api;/env;.css", "/;/env;.css":
+		if strings.Contains(req.Body, "java.runtime.version") {
+			technologies = append(technologies, "Find-Actuator API bypass未授权访问")
+		}
+	case "/env", "/api/env", "/manage/env", "/management/env", "/api/actuator/env":
+		if strings.Contains(req.Body, "java.runtime.version") {
+			technologies = append(technologies, "Find-Actuator API 未授权访问")
+		}
+	case "/httptrace", "/actuator/httptrace", "/jeecg-boot/actuator/httptrace", "/actuator;/httptrace", "/api/actuator;/httptrace", "/api/actuator/httptrace", "/actuator/httptrace;.css":
+		if strings.Contains(req.Body, "{\"traces\"") {
+			technologies = append(technologies, "Find-Actuator httptrace API 未授权访问")
+		}
+	case "/admin/adminer.php", "/adminer/adminer.php", "//adminer.php", "/":
+		if strings.Contains(req.Body, "- Adminer") {
+			technologies = append(technologies, "Find-Adminer.php")
+		}
+	case "/any800/echatManager.do":
+		if strings.Contains(req.Body, "Any800全渠道智能客服") {
+			technologies = append(technologies, "/any800/echatManager.do")
+		}
 	}
 	return technologies
 }
