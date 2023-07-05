@@ -15673,6 +15673,6 @@
     "cms": "nginxWebUI",
     "method": "keyword",
     "location": "body",
-    "keyword": ["<title>nginxWebUI</title>","adminStr"]
+    "keyword": ["<title>nginxWebUI</title>"]
   }]
 }
