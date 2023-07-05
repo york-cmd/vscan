@@ -15669,5 +15669,10 @@
     "method": "keyword",
     "location": "body",
     "keyword": ["Powered by MCms"]
+  },{
+    "cms": "nginxWebUI",
+    "method": "keyword",
+    "location": "body",
+    "keyword": ["<title>nginxWebUI</title>","adminStr"]
   }]
 }
