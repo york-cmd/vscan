@@ -318,8 +318,11 @@ func POCcheck(wappalyzertechnologies []string, URL string, finalURL string, chec
 			}
 
 		case "ecology泛微e-office":
-			if weaver.CVE_20223_2647(URL) {
-				technologies = append(technologies, "GoPOC_泛微 OA SQL|CVE_20223_2647|复现参考链接：https://mp.weixin.qq.com/s/4vJvjplAXE2TjOzJB0hMfQ")
+			if weaver.CVE_2023_2647(URL) {
+				technologies = append(technologies, "GoPOC_泛微 OA SQL|CVE_2023_2647|复现参考链接：https://mp.weixin.qq.com/s/4vJvjplAXE2TjOzJB0hMfQ")
+			}
+			if weaver.CVE_2023_2523(URL) {
+				technologies = append(technologies, "GoPOC_泛微 OA SQL|CVE_2023_2523|复现参考链接：https://blog.csdn.net/qq_41904294/article/details/130832416")
 			}
 		case "帆软数据决策系统":
 			if fineReport.CNVD_2018_04757(URL) {
