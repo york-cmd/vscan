@@ -16,7 +16,7 @@ func E_Cology_ChangeUserInfo(u string) bool {
 			resourceUuid := re.FindStringSubmatch(str)
 			//pkg.GoPocLog(fmt.Sprintf("正则匹配内容:%s,长度为：%d\n", resourceUuid, len(resourceUuid)))
 			if len(resourceUuid) >= 1 {
-				pkg.GoPocLog(fmt.Sprintf("Found vuln E_Cology_信息泄露_爆破 loginId. 配合泛微E-Cology ofsLogin任意用户登录使用|%s|参考链接：https://github.com/zhaoyumi/WeaverExploit_All\n", u+"/mobile/plugin/changeUserInfo.jsp?type=getLoginid&mobile="))
+				pkg.GoPocLog(fmt.Sprintf("Found vuln E_Cology_信息泄露_爆破 loginId. 配合泛微E-Cology ofsLogin任意用户登录使用|%s\n", u+"/mobile/plugin/changeUserInfo.jsp?type=getLoginid&mobile="))
 				return true
 			}
 

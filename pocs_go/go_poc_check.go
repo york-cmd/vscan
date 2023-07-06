@@ -317,7 +317,10 @@ func POCcheck(wappalyzertechnologies []string, URL string, finalURL string, chec
 				technologies = append(technologies, "GoPOC_泛微 OA SQL|QVD_2023_5012|复现参考链接：https://mp.weixin.qq.com/s/_NzNyWjMrx4DhMtrYGZlVQ")
 			}
 			if weaver.E_Cology_ChangeUserInfo(URL) {
-				technologies = append(technologies, "GoPOC_泛微 OA Found vuln E_Cology_信息泄露_爆破 loginId. 配合泛微E-Cology ofsLogin任意用户登录使用|复现参考链接：https://mp.weixin.qq.com/s/yj4pJwEWUbeZPhbB2b4k6Q")
+				technologies = append(technologies, "GoPOC_泛微 OA Found vuln E_Cology_信息泄露_爆破 loginId. 配合泛微E-Cology ofsLogin任意用户登录使用|复现参考链接：https://mp.weixin.qq.com/s/FtDYKhKlCC8pCshM6Q-1AA")
+			}
+			if weaver.E_Cology_ofsLogin_user_login(URL) {
+				technologies = append(technologies, "GoPOC_泛微 OA Found vuln E_Cology_ofsLogin.jsp任意用户登录漏洞|复现参考链接：https://mp.weixin.qq.com/s/FtDYKhKlCC8pCshM6Q-1AA")
 
 			}
 
