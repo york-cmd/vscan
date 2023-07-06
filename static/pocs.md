@@ -58,5 +58,6 @@ Nuclei 1700+ pocs
 4.2023-07-03 泛微OA QVD_2023_5012 SQL注入 [参考链接](https://mp.weixin.qq.com/s/_NzNyWjMrx4DhMtrYGZlVQ)
 5.2023-07-03 泛微OA CVE_20223_2647 文件上传 [参考链接](https://mp.weixin.qq.com/s/4vJvjplAXE2TjOzJB0hMfQ)
 6.2023-07-05 nginxWebUI runCmd命令执行漏洞 [参考链接](https://mp.weixin.qq.com/s/5N89pINE9SmpMFUoVJlgbA)
-
+7.2023-07-06 合并工具Find-SomeThing未授权检测功能(待完成功能：https://github.com/Tsojan/TsojanScan 合并未授权检测) [参考链接](https://github.com/LittleBear4/Find-SomeThing)
+8.2023-07-06 泛微OA CVE-2023-2523 文件上传 [参考链接](https://blog.csdn.net/qq_41904294/article/details/130832416)
 ```
