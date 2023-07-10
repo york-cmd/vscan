@@ -4884,5 +4884,6 @@
 		"method": "keyword",
 		"location": "body",
 		"keyword": ["nginxWebUI"]
-	}]
+	}
+	]
 }

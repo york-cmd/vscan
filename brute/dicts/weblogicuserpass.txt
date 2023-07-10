@@ -12,3 +12,5 @@ mary,password
 system,security
 wlcsystem,wlcsystem
 wlcsystem,sipisystem
+welcome1,welcome1
+welcome,welcome

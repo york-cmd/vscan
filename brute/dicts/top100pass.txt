@@ -4,6 +4,8 @@ admin123
 password
 admin@123
 admin888
+88888888
+888888
 root
 123456
 a123456
@@ -83,6 +85,7 @@ zxc123456
 abcd1234
 asdasd
 666666
+66666666
 love1314
 QAZ123
 aaa123

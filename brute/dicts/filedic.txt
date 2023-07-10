@@ -1210,3 +1210,4 @@
 /js/ueditor/net/controller.ashx?action=catchimage
 /Static/ueditor/net/controller.ashx?action=catchimage
 /Scripts/Ueditor/net/controller.ashx?action=catchimage
+/scripts/ueditor/net/controller.ashx?action=catchimage
