@@ -18,7 +18,7 @@ func QVD_2023_5012(u string) bool {
 			re := regexp.MustCompile(pattern)
 			resourceUuid := re.FindStringSubmatch(req.Body)[1]
 			if strings.Contains(req.Body, resourceUuid) {
-				pkg.GoPocLog(fmt.Sprintf("Found vuln weaver QVD_2023_5012!!!|%s\n", u+"/mobile/%20/plugin/browser.jsp"))
+				pkg.GoPocLog(fmt.Sprintf("Found vuln weaver SQL注入-QVD_2023_5012!|%s\n", u+"/mobile/%20/plugin/browser.jsp"))
 				return true
 			}
 		}

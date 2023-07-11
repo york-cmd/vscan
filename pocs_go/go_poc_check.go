@@ -297,7 +297,7 @@ func POCcheck(wappalyzertechnologies []string, URL string, finalURL string, chec
 			if yonyou.FileReceiveServlet(URL) {
 				technologies = append(technologies, "GoPOC_yonyou|FileReceiveServlet")
 			}
-		case "ecology-oa", "泛微 OA":
+		case "ecology-oa", "泛微 OA", "ecology":
 			if weaver.LnFileDownload(URL) {
 				technologies = append(technologies, "GoPOC_泛微 OA|LnFileDownload")
 			}
@@ -321,9 +321,17 @@ func POCcheck(wappalyzertechnologies []string, URL string, finalURL string, chec
 			}
 			if weaver.E_Cology_ofsLogin_user_login(URL) {
 				technologies = append(technologies, "GoPOC_泛微 OA Found vuln E_Cology_ofsLogin.jsp任意用户登录漏洞|复现参考链接：https://mp.weixin.qq.com/s/FtDYKhKlCC8pCshM6Q-1AA")
+			}
+			if weaver.CheckServer_sql(URL) {
+				technologies = append(technologies, "GoPOC_泛微 OA Found vuln CheckServer-sql注入漏洞|复现参考链接：https://mp.weixin.qq.com/s/7Zvr0-9g-piLfH34V7swWA")
+			}
+			if weaver.HrmCareerApplyPerView_sql(URL) {
+				technologies = append(technologies, "GoPOC_泛微 OA Found vuln HrmCareerApplyPerView_sql注入漏洞")
+			}
+			if weaver.E_Cology_Database_Leak(URL) {
+				technologies = append(technologies, "GoPOC_泛微 OA Found 数据库信息泄露漏洞")
 
 			}
-
 		case "ecology泛微e-office":
 			if weaver.CVE_2023_2647(URL) {
 				technologies = append(technologies, "GoPOC_泛微 OA SQL|CVE_2023_2647|复现参考链接：https://mp.weixin.qq.com/s/4vJvjplAXE2TjOzJB0hMfQ")

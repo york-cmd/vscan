@@ -9,7 +9,7 @@ import (
 func E_Cology_ChangeUserInfo(u string) bool {
 
 	if req, err := pkg.HttpRequset(u+"/mobile/plugin/changeUserInfo.jsp?type=getLoginid&mobile=", "GET", "", false, nil); err == nil {
-		//pkg.GoPocLog(req.Body)
+
 		if req.StatusCode == 200 {
 			str := req.Body
 			re := regexp.MustCompile("\"status\":.([^\\\"]+)")
