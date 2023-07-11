@@ -332,6 +332,10 @@ func POCcheck(wappalyzertechnologies []string, URL string, finalURL string, chec
 				technologies = append(technologies, "GoPOC_泛微 OA Found 数据库信息泄露漏洞")
 
 			}
+		case "Resin":
+			if weaver.E_Cology_Database_Leak(URL) {
+				technologies = append(technologies, "GoPOC_泛微 OA Found 数据库信息泄露漏洞")
+			}
 		case "ecology泛微e-office":
 			if weaver.CVE_2023_2647(URL) {
 				technologies = append(technologies, "GoPOC_泛微 OA SQL|CVE_2023_2647|复现参考链接：https://mp.weixin.qq.com/s/4vJvjplAXE2TjOzJB0hMfQ")
