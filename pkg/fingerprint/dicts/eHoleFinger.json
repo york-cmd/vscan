@@ -279,6 +279,11 @@
 		"method": "keyword",
 		"location": "header",
 		"keyword": ["/wui/theme/ecology7/page/softkey/Keyboard.js"]
+	},{
+		"cms": "ecology",
+		"method": "keyword",
+		"location": "header",
+		"keyword": ["<script type='text/javascript'>try{top.location.href='/login/Login.jsp';}catch(e){window.location.href='/login/Login.jsp';}</script>"]
 	}, {
 		"cms": "天融信VPN设备",
 		"method": "keyword",
