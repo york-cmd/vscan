@@ -61,5 +61,8 @@ Nuclei 1700+ pocs
 7.2023-07-06 合并工具Find-SomeThing未授权检测功能(待完成功能：https://github.com/Tsojan/TsojanScan 合并未授权检测) [参考链接](https://github.com/LittleBear4/Find-SomeThing)
 8.2023-07-06 泛微OA CVE-2023-2523 文件上传 [参考链接](https://blog.csdn.net/qq_41904294/article/details/130832416)
 9.2023-07-10 海康威视svm综合安防系统任意文件上传漏[暂无]
-10. 
+10.2023-07-11 E-Cology-CheckServer-sql [参考链接]（https://mp.weixin.qq.com/s/7Zvr0-9g-piLfH34V7swWA） 
+11.2023-07-11 E-Cology-Database-Leak  [参考链接](https://www.lmlphp.com/user/17042/article/item/500812/)
+12.2023-07-11 E-Cology-HrmCareerApplyPerView-sql [参考链接](https://github.com/w-digital-scanner/w9scan/blob/aa725571897f095635c4b7660db5ce90c655946c/plugins/weaver_oa/1707.py#L13)
+
 ```
