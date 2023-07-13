@@ -3,6 +3,7 @@ package pocs_go
 import (
 	"fmt"
 	"github.com/veo/vscan/pocs_go/chanjetTplus"
+	"github.com/veo/vscan/pocs_go/dahua"
 	"github.com/veo/vscan/pocs_go/nginx"
 	"net/url"
 
@@ -334,6 +335,10 @@ func POCcheck(wappalyzertechnologies []string, URL string, finalURL string, chec
 			if weaver.E_Cology_filedownloadforoutdoc_sql(URL) {
 				technologies = append(technologies, "GoPOC_泛微 OA Found filedownloadforoutdoc_sql注入漏洞")
 			}
+			if weaver.E_Cology_byxml_xxe(URL) {
+				technologies = append(technologies, "GoPOC_泛微 OA Found E_Cology_byxml_xxe")
+			}
+
 		case "Resin":
 			if weaver.E_Cology_Database_Leak(URL) {
 				technologies = append(technologies, "GoPOC_泛微 OA Found 数据库信息泄露漏洞")
@@ -404,6 +409,11 @@ func POCcheck(wappalyzertechnologies []string, URL string, finalURL string, chec
 		case "nginxWebUI":
 			if nginx.NginxWebUI_runCmd_rce(URL) {
 				technologies = append(technologies, "GoPOC_NginxWebUI_runCmd_rce|参考链接：https://mp.weixin.qq.com/s/5N89pINE9SmpMFUoVJlgbA")
+			}
+		case "dahua-WP":
+			if dahua.Dahua_devicePoint_addImgIco_upload_rce(URL) {
+				technologies = append(technologies, "GoPOC_dahua_upload_rce|参考链接：https://github.com/thelostworldFree/dahua_upload_POC")
+
 			}
 		}
 		if checklog4j {

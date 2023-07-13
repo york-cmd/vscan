@@ -50,7 +50,7 @@ xrayV2 all 354 pocs
 Nuclei 1700+ pocs
 
 
-更新记录：
+poc更新记录：
 
 1.2023-06-30 QVD-2023-13612 用友畅捷通T SQL注入 [参考链接](https://github.com/Sweelg/QVD-2023-13612_TPlus-SQLvuln)
 2.2023-07-01 海康威视isecure center 综合安防管理平台存在任意文件上传漏洞 [参考链接](https://mp.weixin.qq.com/s/4An-tUll11dBVozyYKxTfg)
@@ -64,5 +64,11 @@ Nuclei 1700+ pocs
 10.2023-07-11 E-Cology-CheckServer-sql [参考链接]（https://mp.weixin.qq.com/s/7Zvr0-9g-piLfH34V7swWA） 
 11.2023-07-11 E-Cology-Database-Leak  [参考链接](https://www.lmlphp.com/user/17042/article/item/500812/)
 12.2023-07-11 E-Cology-HrmCareerApplyPerView-sql [参考链接](https://github.com/w-digital-scanner/w9scan/blob/aa725571897f095635c4b7660db5ce90c655946c/plugins/weaver_oa/1707.py#L13)
+13.2023-07-11 E_Cology_filedownloadforoutdoc_sql (未测试)[参考链接](https://mp.weixin.qq.com/s/8ocAHc30OpEWha6nWI6UPA)
+13.2023-07-13 dahua_upload_rce [参考链接](https://github.com/thelostworldFree/dahua_upload_POC)  
+13.2023-07-13 E_Cology_byxml_xxe [参考链接](https://github.com/UltimateSec/ultimaste-nuclei-templates/blob/main/ecology-oa/ecology-oa-byxml-xxe.yaml)  
+
+其他更新记录
+1.2023-07-12 合并指纹1w+
 
 ```
