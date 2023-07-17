@@ -419,6 +419,10 @@ func POCcheck(wappalyzertechnologies []string, URL string, finalURL string, chec
 			if dahua.Dahua_attachment_downloadByUrlAtt_file_read(URL) {
 				technologies = append(technologies, "GoPOC_dahua_file_read|参考链接：https://mp.weixin.qq.com/s/x-yyaFrGc-cwS7Zm6rdwEg")
 			}
+		case "大华安防 DSS":
+			if dahua.Dahua_attachment_downloadByUrlAtt_file_read(URL) {
+				technologies = append(technologies, "GoPOC_dahua_file_read|参考链接：https://mp.weixin.qq.com/s/x-yyaFrGc-cwS7Zm6rdwEg")
+			}
 		}
 		if checklog4j {
 			if log4j.Check(URL, finalURL) {
