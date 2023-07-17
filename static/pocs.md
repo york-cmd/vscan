@@ -67,7 +67,7 @@ poc更新记录：
 13.2023-07-11 E_Cology_filedownloadforoutdoc_sql (未测试)[参考链接](https://mp.weixin.qq.com/s/8ocAHc30OpEWha6nWI6UPA)
 13.2023-07-13 dahua_upload_rce [参考链接](https://github.com/thelostworldFree/dahua_upload_POC)  
 13.2023-07-13 E_Cology_byxml_xxe [参考链接](https://github.com/UltimateSec/ultimaste-nuclei-templates/blob/main/ecology-oa/ecology-oa-byxml-xxe.yaml)  
-
+14.2023-07-13 Dahua_attachment_downloadByUrlAtt_file_read [参考链接](https://mp.weixin.qq.com/s/x-yyaFrGc-cwS7Zm6rdwEg) 
 其他更新记录
 1.2023-07-12 合并指纹1w+
 

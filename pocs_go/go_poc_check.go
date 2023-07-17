@@ -415,7 +415,9 @@ func POCcheck(wappalyzertechnologies []string, URL string, finalURL string, chec
 		case "dahua-WP":
 			if dahua.Dahua_devicePoint_addImgIco_upload_rce(URL) {
 				technologies = append(technologies, "GoPOC_dahua_upload_rce|参考链接：https://github.com/thelostworldFree/dahua_upload_POC")
-
+			}
+			if dahua.Dahua_attachment_downloadByUrlAtt_file_read(URL) {
+				technologies = append(technologies, "GoPOC_dahua_file_read|参考链接：https://mp.weixin.qq.com/s/x-yyaFrGc-cwS7Zm6rdwEg")
 			}
 		}
 		if checklog4j {
