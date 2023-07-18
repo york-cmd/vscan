@@ -62,12 +62,13 @@ poc更新记录：
 8.2023-07-06 泛微OA CVE-2023-2523 文件上传 [参考链接](https://blog.csdn.net/qq_41904294/article/details/130832416)
 9.2023-07-10 海康威视svm综合安防系统任意文件上传漏[暂无]
 10.2023-07-11 E-Cology-CheckServer-sql [参考链接]（https://mp.weixin.qq.com/s/7Zvr0-9g-piLfH34V7swWA） 
-11.2023-07-11 E-Cology-Database-Leak  [参考链接](https://www.lmlphp.com/user/17042/article/item/500812/)
+11.2023-07-11 E-Cology-Database-Leak  [参考链接](https://www.lmlphp.com/user/17042/article/item/500812/) (2023-07-17已修复bug)
 12.2023-07-11 E-Cology-HrmCareerApplyPerView-sql [参考链接](https://github.com/w-digital-scanner/w9scan/blob/aa725571897f095635c4b7660db5ce90c655946c/plugins/weaver_oa/1707.py#L13)
 13.2023-07-11 E_Cology_filedownloadforoutdoc_sql (未测试)[参考链接](https://mp.weixin.qq.com/s/8ocAHc30OpEWha6nWI6UPA)
 13.2023-07-13 dahua_upload_rce [参考链接](https://github.com/thelostworldFree/dahua_upload_POC)  
 13.2023-07-13 E_Cology_byxml_xxe [参考链接](https://github.com/UltimateSec/ultimaste-nuclei-templates/blob/main/ecology-oa/ecology-oa-byxml-xxe.yaml)  
-14.2023-07-13 Dahua_attachment_downloadByUrlAtt_file_read [参考链接](https://mp.weixin.qq.com/s/x-yyaFrGc-cwS7Zm6rdwEg) 
+14.2023-07-17 Dahua_attachment_downloadByUrlAtt_file_read [参考链接](https://mp.weixin.qq.com/s/x-yyaFrGc-cwS7Zm6rdwEg) 
+
 其他更新记录
 1.2023-07-12 合并指纹1w+
 

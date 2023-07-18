@@ -10,6 +10,8 @@ import (
 )
 
 func Check(u string, finalURL string) bool {
+	pkg.CeyeApi = "33de9ca912b264efd495cd61abcccebc"
+	pkg.CeyeDomain = "9l2i6i.ceye.io"
 	if (pkg.CeyeApi != "" && pkg.CeyeDomain != "") || jndi.JndiAddress != "" {
 		var host = "null"
 		randomstr := pkg.RandomStr()
