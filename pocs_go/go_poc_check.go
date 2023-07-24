@@ -278,12 +278,15 @@ func POCcheck(wappalyzertechnologies []string, URL string, finalURL string, chec
 			if yonyou.FileReceiveServlet(URL) {
 				technologies = append(technologies, "GoPOC_yonyou|FileReceiveServlet")
 			}
-		case "YONYOU NC":
+		case "YONYOU NC", "用友 NC Cloud", "Yonyou-NC":
 			if yonyou.NCFindWeb(URL) {
 				technologies = append(technologies, "GoPOC_yonyou|NCFindWeb")
 			}
 			if yonyou.FileReceiveServlet(URL) {
 				technologies = append(technologies, "GoPOC_yonyou|FileReceiveServlet")
+			}
+			if yonyou.Nc_cloud_jsinvoke_upload_rce(URL) {
+				technologies = append(technologies, "GoPOC_yonyou|Nc_cloud_jsinvoke_upload_rce")
 			}
 		case "yonyou-grp-u8":
 			if yonyou.ProxySql(URL) {
