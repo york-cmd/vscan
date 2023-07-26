@@ -68,6 +68,7 @@ poc更新记录：
 13.2023-07-13 dahua_upload_rce [参考链接](https://github.com/thelostworldFree/dahua_upload_POC)  
 13.2023-07-13 E_Cology_byxml_xxe [参考链接](https://github.com/UltimateSec/ultimaste-nuclei-templates/blob/main/ecology-oa/ecology-oa-byxml-xxe.yaml)  
 14.2023-07-17 Dahua_attachment_downloadByUrlAtt_file_read [参考链接](https://mp.weixin.qq.com/s/x-yyaFrGc-cwS7Zm6rdwEg) 
+14.2023-07-24 Nc_cloud_jsinvoke_upload_rce [参考链接](https://mp.weixin.qq.com/s/axnVd0dH6HXJVHXWCAC7mg) 
 
 其他更新记录
 1.2023-07-12 合并指纹1w+

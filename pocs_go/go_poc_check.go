@@ -344,6 +344,9 @@ func POCcheck(wappalyzertechnologies []string, URL string, finalURL string, chec
 			if weaver.E_Cology_syncuserinof_sql(URL) {
 				technologies = append(technologies, "GoPOC_泛微 OA Found E_Cology_syncuserinof_sql")
 			}
+			if weaver.E_Cology_bsh_servlet_rce(URL) {
+				technologies = append(technologies, "GoPOC_泛微 OA Found E_Cology_syncuserinof_sql")
+			}
 		case "Resin":
 			if weaver.E_Cology_Database_Leak(URL) {
 				technologies = append(technologies, "GoPOC_泛微 OA Found 数据库信息泄露漏洞")
