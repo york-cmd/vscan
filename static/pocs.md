@@ -71,6 +71,8 @@ poc更新记录：
 14.2023-07-24 Nc_cloud_jsinvoke_upload_rce [参考链接](https://mp.weixin.qq.com/s/axnVd0dH6HXJVHXWCAC7mg) 
 14.2023-07-26 E_Cology_bsh_servlet_rce [参考链接](https://github.com/30579096/OA-EXPTOOL/blob/main/main/weaver/Bsh_RCE.py) 
 14.2023-07-26 E_Cology_WorkflowServiceXml_rce [参考链接1](https://github.com/zhaoyumi/WeaverExploit_All/) [参考链接2](https://github.com/zhiliao07/Apt_t00ls) 
+14.2023-07-27 CVE_2023_38646 [参考链接](https://github.com/UltimateSec/ultimaste-nuclei-templates/blob/main/metabase/CVE-2023-38646.yaml) 
+14.2023-07-27 E_Coloy_UserSelect_unauthorized [参考链接](https://github.com/LittleBear4/OA-EXPTOOL/blob/main/book/weaver/ecologye-%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE.yaml) 
 
 其他更新记录
 1.2023-07-12 合并指纹1w+

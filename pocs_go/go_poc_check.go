@@ -351,6 +351,9 @@ func POCcheck(wappalyzertechnologies []string, URL string, finalURL string, chec
 			if weaver.E_Cology_WorkflowServiceXml_rce(URL) {
 				technologies = append(technologies, "GoPOC_泛微 OA Found E_Cology_WorkflowServiceXml_rce|利用参考:https://github.com/zhiliao07/Apt_t00ls")
 			}
+			if weaver.E_Coloy_UserSelect_unauthorized(URL) {
+				technologies = append(technologies, "GoPOC_泛微 OA Found E_Coloy_UserSelect_unauthorized")
+			}
 		case "Resin":
 			if weaver.E_Cology_Database_Leak(URL) {
 				technologies = append(technologies, "GoPOC_泛微 OA Found 数据库信息泄露漏洞")
