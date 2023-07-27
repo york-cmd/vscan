@@ -2,6 +2,7 @@ package pocs_go
 
 import (
 	"fmt"
+	"github.com/veo/vscan/pocs_go/Metabase"
 	"github.com/veo/vscan/pocs_go/chanjetTplus"
 	"github.com/veo/vscan/pocs_go/dahua"
 	"github.com/veo/vscan/pocs_go/nginx"
@@ -349,7 +350,6 @@ func POCcheck(wappalyzertechnologies []string, URL string, finalURL string, chec
 			}
 			if weaver.E_Cology_WorkflowServiceXml_rce(URL) {
 				technologies = append(technologies, "GoPOC_泛微 OA Found E_Cology_WorkflowServiceXml_rce|利用参考:https://github.com/zhiliao07/Apt_t00ls")
-
 			}
 		case "Resin":
 			if weaver.E_Cology_Database_Leak(URL) {
@@ -432,6 +432,10 @@ func POCcheck(wappalyzertechnologies []string, URL string, finalURL string, chec
 		case "大华安防 DSS":
 			if dahua.Dahua_attachment_downloadByUrlAtt_file_read(URL) {
 				technologies = append(technologies, "GoPOC_dahua_file_read|参考链接：https://mp.weixin.qq.com/s/x-yyaFrGc-cwS7Zm6rdwEg")
+			}
+		case "Metabase":
+			if Metabase.CVE_2023_38646(URL) {
+				technologies = append(technologies, "GoPOC_CVE_2023_38646_RCE")
 			}
 		}
 		if checklog4j {
