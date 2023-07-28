@@ -73,6 +73,9 @@ poc更新记录：
 14.2023-07-26 E_Cology_WorkflowServiceXml_rce [参考链接1](https://github.com/zhaoyumi/WeaverExploit_All/) [参考链接2](https://github.com/zhiliao07/Apt_t00ls) 
 14.2023-07-27 CVE_2023_38646 [参考链接](https://github.com/UltimateSec/ultimaste-nuclei-templates/blob/main/metabase/CVE-2023-38646.yaml) 
 14.2023-07-27 E_Coloy_UserSelect_unauthorized [参考链接](https://github.com/LittleBear4/OA-EXPTOOL/blob/main/book/weaver/ecologye-%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE.yaml) 
+14.2023-07-28 E_Cology_OA_XmlRpcServlet_file_read [参考链接](https://github.com/qingchenhh/qc_poc) 
+14.2023-07-28 js_query_172_read_file [参考链接](https://mp.weixin.qq.com/s/mWoZ0MhrflFbok2ad_CI1A) 
+14.2023-07-28 E_Office_FlowCommon_uploald [参考链接](https://github.com/LittleBear4/OA-EXPTOOL/blob/main/book/weaver/E-Office-FlowCommon-uploal.yaml) 
 
 其他更新记录
 1.2023-07-12 合并指纹1w+

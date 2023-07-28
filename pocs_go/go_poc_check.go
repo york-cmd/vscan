@@ -372,6 +372,12 @@ func POCcheck(wappalyzertechnologies []string, URL string, finalURL string, chec
 			if weaver.E_Office_do_excel_php_rce(URL) {
 				technologies = append(technologies, "GoPOC_E_Office_do_excel_php_rce")
 			}
+			if weaver.E_Office_FlowCommon_uploald(URL) {
+				technologies = append(technologies, "GoPOC_E_Office_FlowCommon_uploald")
+			}
+			if weaver.E_Cology_OA_XmlRpcServlet_file_read(URL) {
+				technologies = append(technologies, "GoPOC_E_Cology_OA_XmlRpcServlet_file_read")
+			}
 		case "帆软数据决策系统":
 			if fineReport.CNVD_2018_04757(URL) {
 				technologies = append(technologies, "GoPOC_fineReport|CNVD-2018-04757")
