@@ -1,3 +1,4 @@
+/xxl-job-admin/toLogin
 /officeserver.jsp
 /officeserverservlet
 /htmlofficeservlet

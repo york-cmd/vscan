@@ -113,7 +113,7 @@ func addfingerprintsnormal(payload string, technologies []string, req *pkg.Respo
 			technologies = append(technologies, fmt.Sprintf("800全渠道智能客服：%s", req.RequestUrl))
 		}
 	case "/toLogin", "/xxl-job/toLogin", "/xxl-job-admin/toLogin", "/xxl/toLogin", "/xxljob/toLogin":
-		if strings.Contains(req.Body, "<b>XXL</b>JOB") {
+		if strings.Contains(req.Body, "<a><b>XXL</b>JOB</a>") {
 			technologies = append(technologies, fmt.Sprintf("Find-xxl-Job：%s", req.RequestUrl))
 		}
 	case "/WEB-INF/web.xml", "/static?/%2557EB-INF/web.xml", "/%2e/WEB-INF/web.xml":

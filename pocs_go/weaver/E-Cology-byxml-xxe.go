@@ -3,7 +3,6 @@ package weaver
 import (
 	"fmt"
 	"github.com/veo/vscan/pkg"
-
 	"strings"
 )
 

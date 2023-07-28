@@ -302,7 +302,7 @@ func POCcheck(wappalyzertechnologies []string, URL string, finalURL string, chec
 			if yonyou.FileReceiveServlet(URL) {
 				technologies = append(technologies, "GoPOC_yonyou|FileReceiveServlet")
 			}
-		case "ecology-oa", "泛微 OA", "ecology":
+		case "ecology-oa", "ecology":
 			if weaver.LnFileDownload(URL) {
 				technologies = append(technologies, "GoPOC_泛微 OA|LnFileDownload")
 			}
@@ -353,6 +353,9 @@ func POCcheck(wappalyzertechnologies []string, URL string, finalURL string, chec
 			}
 			if weaver.E_Coloy_UserSelect_unauthorized(URL) {
 				technologies = append(technologies, "GoPOC_泛微 OA Found E_Coloy_UserSelect_unauthorized")
+			}
+			if weaver.E_Cology_OA_XmlRpcServlet_file_read(URL) {
+				technologies = append(technologies, "GoPOC_泛微 OA Found E_Cology_OA_XmlRpcServlet_file_read")
 			}
 		case "Resin":
 			if weaver.E_Cology_Database_Leak(URL) {
