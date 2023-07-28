@@ -378,6 +378,9 @@ func POCcheck(wappalyzertechnologies []string, URL string, finalURL string, chec
 			if weaver.E_Cology_OA_XmlRpcServlet_file_read(URL) {
 				technologies = append(technologies, "GoPOC_E_Cology_OA_XmlRpcServlet_file_read")
 			}
+			if weaver.E_Office_E_mobileAppinit_upload(URL) {
+				technologies = append(technologies, "GoPOC_E_Office_E_mobileAppinit_upload")
+			}
 		case "帆软数据决策系统":
 			if fineReport.CNVD_2018_04757(URL) {
 				technologies = append(technologies, "GoPOC_fineReport|CNVD-2018-04757")
@@ -385,6 +388,7 @@ func POCcheck(wappalyzertechnologies []string, URL string, finalURL string, chec
 			if fineReport.Design_save_svg(URL) {
 				technologies = append(technologies, "GoPOC_fineReport|Design_save_svg")
 			}
+
 		case "金蝶云星空":
 			if apusic.Server_file(URL) {
 				technologies = append(technologies, "GoPOC_apusic|Server_file")

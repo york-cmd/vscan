@@ -76,6 +76,7 @@ poc更新记录：
 14.2023-07-28 E_Cology_OA_XmlRpcServlet_file_read [参考链接](https://github.com/qingchenhh/qc_poc) 
 14.2023-07-28 js_query_172_read_file [参考链接](https://mp.weixin.qq.com/s/mWoZ0MhrflFbok2ad_CI1A) 
 14.2023-07-28 E_Office_FlowCommon_uploald [参考链接](https://github.com/LittleBear4/OA-EXPTOOL/blob/main/book/weaver/E-Office-FlowCommon-uploal.yaml) 
+14.2023-07-28 E_Office_E_mobileAppinit_upload [参考链接](https://github.com/xinyisleep/pocscan/blob/ee0c74e68ec95b82a4e4ebcdb961d6ed18a44b77/%E6%B3%9B%E5%BE%AE/oa%E6%B3%9B%E5%BE%AEE-officeE-mobileAppinit.php%E5%AD%98%E5%9C%A8%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E.py) 
 
 其他更新记录
 1.2023-07-12 合并指纹1w+
