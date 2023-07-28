@@ -6,6 +6,7 @@ import (
 	"github.com/veo/vscan/pocs_go/chanjetTplus"
 	"github.com/veo/vscan/pocs_go/dahua"
 	"github.com/veo/vscan/pocs_go/nginx"
+	"github.com/veo/vscan/pocs_go/other"
 	"net/url"
 
 	"github.com/veo/vscan/brute"
@@ -368,6 +369,9 @@ func POCcheck(wappalyzertechnologies []string, URL string, finalURL string, chec
 			if weaver.CVE_2023_2523(URL) {
 				technologies = append(technologies, "GoPOC_泛微 OA SQL|CVE_2023_2523|复现参考链接：https://blog.csdn.net/qq_41904294/article/details/130832416")
 			}
+			if weaver.E_Office_do_excel_php_rce(URL) {
+				technologies = append(technologies, "GoPOC_E_Office_do_excel_php_rce")
+			}
 		case "帆软数据决策系统":
 			if fineReport.CNVD_2018_04757(URL) {
 				technologies = append(technologies, "GoPOC_fineReport|CNVD-2018-04757")
@@ -442,6 +446,10 @@ func POCcheck(wappalyzertechnologies []string, URL string, finalURL string, chec
 		case "Metabase":
 			if Metabase.CVE_2023_38646(URL) {
 				technologies = append(technologies, "GoPOC_CVE_2023_38646_RCE")
+			}
+		case "H3C/安博通/任子行/OEM系列安全产品":
+			if other.Js_query_172_read_file(URL) {
+				technologies = append(technologies, "GoPOC_js_query_172_read_file")
 			}
 		}
 		if checklog4j {
