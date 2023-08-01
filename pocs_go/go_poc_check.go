@@ -381,6 +381,9 @@ func POCcheck(wappalyzertechnologies []string, URL string, finalURL string, chec
 			if weaver.E_Office_E_mobileAppinit_upload(URL) {
 				technologies = append(technologies, "GoPOC_E_Office_E_mobileAppinit_upload")
 			}
+			if weaver.E_Office_SQLInjection_CNVD_2022_43246(URL) {
+				technologies = append(technologies, "GoPOC_E_Office_SQLInjection_CNVD_2022_43246")
+			}
 		case "帆软数据决策系统":
 			if fineReport.CNVD_2018_04757(URL) {
 				technologies = append(technologies, "GoPOC_fineReport|CNVD-2018-04757")
