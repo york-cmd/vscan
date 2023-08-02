@@ -433,6 +433,10 @@ func POCcheck(wappalyzertechnologies []string, URL string, finalURL string, chec
 				technologies = append(technologies, "GoPOC_svm_api_ivms_file_uplaod_rce|海康威视综合安防管理平台文件上传漏洞")
 
 			}
+			if HIKVISION.HIKVISION_ZHAFGL_Fastjson_RCE_nodns(URL) {
+				technologies = append(technologies, "GoPOC_HIKVISION_ZHAFGL_Fastjson_RCE|海康威视综合安防管理平台fastjson漏洞")
+
+			}
 		case "皓峰通讯-智能防火墙":
 			if haofeng.Setdomain(URL) {
 				technologies = append(technologies, "GoPOC_haofeng|Setdomain")
