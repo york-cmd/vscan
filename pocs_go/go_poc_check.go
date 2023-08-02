@@ -410,7 +410,7 @@ func POCcheck(wappalyzertechnologies []string, URL string, finalURL string, chec
 			if jinheOA.C6download(URL) {
 				technologies = append(technologies, "GoPOC_jinheOA|C6download")
 			}
-		case "hikvision-ivms", "海康威视综合安防管理平台", "海康威视综合安防平台":
+		case "hikvision-ivms", "海康威视综合安防管理平台", "海康威视综合安防平台", "海康综合安防管理平台":
 			if HIKVISION.CNVD_2021_14544(URL) {
 				technologies = append(technologies, "GoPOC_HIKVISION|CNVD_2021_14544")
 			}
