@@ -7865,7 +7865,7 @@
       ]
     },
     {
-      "cms": "海康综合安防管理平台",
+      "cms": "海康威视综合安防平台",
       "method": "keyword",
       "location": "title",
       "keyword": [
@@ -7948,7 +7948,7 @@
       ]
     },
     {
-      "cms": "海康威视综合安防管理平台",
+      "cms": "海康威视综合安防平台",
       "method": "faviconhash",
       "location": "body",
       "keyword": [
