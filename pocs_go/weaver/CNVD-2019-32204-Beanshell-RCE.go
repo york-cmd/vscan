@@ -33,10 +33,6 @@ func E_Cology_bsh_servlet_rce(u string) bool {
 					pkg.GoPocLog(fmt.Sprintf("Found  vuln wearver_bsh_script_page_rce |%s \n", url))
 					return true
 				}
-				if req.StatusCode == 500 {
-					pkg.GoPocLog(fmt.Sprintf("Found  may be vuln wearver_bsh_script_page_rce |%s \n", url))
-					return true
-				}
 			}
 		}
 	}

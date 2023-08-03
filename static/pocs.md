@@ -79,7 +79,8 @@ poc更新记录：
 25.2023-07-28 E_Office_E_mobileAppinit_upload [参考链接](https://github.com/xinyisleep/pocscan/blob/ee0c74e68ec95b82a4e4ebcdb961d6ed18a44b77/%E6%B3%9B%E5%BE%AE/oa%E6%B3%9B%E5%BE%AEE-officeE-mobileAppinit.php%E5%AD%98%E5%9C%A8%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E.py) 
 26.2023-08-01 E_Office_SQLInjection_CNVD_2022_43246 [参考链接](https://github.com/cqr-cryeye-forks/goby-pocs/blob/main/Weaver-E-Office-SQL-Injection-Vulnerability-(CNVD-2022-43246).json) 
 27.2023-08-01 E_Office_do_excel_php_rce [参考链接](https://github.com/cqr-cryeye-forks/goby-pocs/blob/main/Weaver-E-office-do_excel.php-file-inclusion-vulnerability.json) 
-28.2023-08-01 HIKVISION_ZHAFGL_Fastjson_RCE_nodns [参考链接](https://mp.weixin.qq.com/s/CEGjTyhphr2GMuK9zpl5bg) 
+28.2023-08-02 HIKVISION_ZHAFGL_Fastjson_RCE_nodns [参考链接](https://mp.weixin.qq.com/s/CEGjTyhphr2GMuK9zpl5bg) 
+29.2023-08-02 E_Coloy_FileClient_upload [参考链接](https://github.com/TD0U/WeaverScan) 
 
 其他更新记录
 1.2023-07-12 合并指纹1w+
