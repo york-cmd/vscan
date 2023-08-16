@@ -120,7 +120,7 @@ func addfingerprintsnormal(payload string, technologies []string, req *pkg.Respo
 		if strings.Contains(req.Body, "</web-app>") {
 			technologies = append(technologies, fmt.Sprintf("Find-WEB-INF/web.xml文件泄漏：%s", req.RequestUrl))
 		}
-	case "/api/index.html", "/api.html", "/swagger", "/api/swagger-ui.html", "/swagger-ui.html", "/Swagger/ui/index", "/api/swaggerui", "/swagger/ui", "/swagger/codes", "/api/swagger/ui", "/libs/swaggerui", "/swagger-resources/configuration/ui", "/swagger-resources/configuration/security", "/swagger/v1/swagger.json", "/swagger/v2/swagger.json", "/api/doc", "/docs/", "/doc.html", "/api-docs", "/v1/api-docs", "/v3/api-docs", "/swagger/swagger-ui.html", "/v1.x/swagger-ui.html", "/swagger-ui.html#/api-memory-controller", "/swagger.json", "/api/swagger.json", "/v2/api-docs", "/api/v2/api-docs", "/swagger-dubbo/api-docs", "/user/swagger-ui.html", "/template/swagger-ui.html", "/distv2/index.html", "/dubbo-provider/distv2/index.html", "/spring-security-rest/api/swagger-ui.html", "/spring-security-oauth-resource/swagger-ui.html", "/api/v2/swagger.json":
+	case "/api/index.html", "/api.html", "/swagger", "/api/swagger-ui.html", "/swagger-ui.html", "/Swagger/ui/index", "/api/swaggerui", "/swagger/ui", "/swagger/codes", "/api/swagger/ui", "/libs/swaggerui", "/swagger-resources/configuration/ui", "/swagger-resources/configuration/security", "/swagger/v1/swagger.json", "/swagger/v2/swagger.json", "/api/doc", "/docs/", "/doc.html", "/api-docs", "/v1/api-docs", "/v3/api-docs", "/swagger/swagger-ui.html", "/v1.x/swagger-ui.html", "/swagger-ui.html#/api-memory-controller", "/swagger.json", "/api/swagger.json", "/v2/api-docs", "/api/v2/api-docs", "/swagger-dubbo/api-docs", "/user/swagger-ui.html", "/template/swagger-ui.html", "/distv2/index.html", "/dubbo-provider/distv2/index.html", "/spring-security-rest/api/swagger-ui.html", "/spring-security-oauth-resource/swagger-ui.html", "/api/v2/swagger.json", "/v2/swagger.json":
 		if strings.Contains(req.Body, "swagger") {
 			technologies = append(technologies, fmt.Sprintf("Find-Swagger 文档接口：%s", req.RequestUrl))
 		}
@@ -200,6 +200,10 @@ func addfingerprintsnormal(payload string, technologies []string, req *pkg.Respo
 		if strings.Contains(req.Body, "RequestCount") {
 			technologies = append(technologies, fmt.Sprintf("Find-Druid 未授权访问：%s", req.RequestUrl))
 		}
+	case "/druid/login.html":
+		if strings.Contains(req.Body, "druid monitor") {
+			technologies = append(technologies, fmt.Sprintf("Find-Druid：%s", req.RequestUrl))
+		}
 	case "/druid/index.html":
 		if strings.Contains(req.Body, "druid") {
 			technologies = append(technologies, fmt.Sprintf("Find-Druid：%s", req.RequestUrl))
@@ -239,6 +243,34 @@ func addfingerprintsnormal(payload string, technologies []string, req *pkg.Respo
 	case "/admin/editor/login_admin.asp", "/ewebeditor/admin_login.asp":
 		if strings.Contains(req.Body, "ebeditor") {
 			technologies = append(technologies, fmt.Sprintf("Find-ewebeditor：%s", req.RequestUrl))
+		}
+	case "/axis2/", "/axis2/axis2-admin/", "/axis2-admin/":
+		if strings.Contains(req.Body, "axis-style.css") {
+			technologies = append(technologies, fmt.Sprintf("Find-axis2：%s", req.RequestUrl))
+		}
+	case "/solr/index.html", "/Solr/index.html":
+		if strings.Contains(req.Body, "<title>Solr Admin</title>") {
+			technologies = append(technologies, fmt.Sprintf("Find-solr：%s", req.RequestUrl))
+		}
+	case "/ReportServer", "/report/ReportServer", "/seeyonreport/ReportServer", "/WebReport/ReportServer":
+		if strings.Contains(req.Body, "FineReport,Web Reporting Tool") {
+			technologies = append(technologies, fmt.Sprintf("Find-seeyon_report：%s", req.RequestUrl))
+		}
+	case "/pma/index.php", "/phpmyadmin/index.php", "/PhpMyAdmin/index.php":
+		if strings.Contains(req.Body, "<title>phpMyAdmin</title>") {
+			technologies = append(technologies, fmt.Sprintf("Find-phpMyAdmin：%s", req.RequestUrl))
+		}
+	case "/.git/config":
+		if strings.Contains(req.Body, "[core]") {
+			technologies = append(technologies, fmt.Sprintf("Find-/.git/config：%s", req.RequestUrl))
+		}
+	case "/dwr/index.html", "/_dwr/index.html":
+		if strings.Contains(req.Body, "DWR Test Index") {
+			technologies = append(technologies, fmt.Sprintf("Find-dwr：%s", req.RequestUrl))
+		}
+	case "/www.zip", "/bin.zip", "/www.rar", "/bin.rar", "/ROOT.war", "/ROOT.tar.gz", "/ROOT.zip", "/web.zip", "/web.rar", "/web.tar.gz", "/public.zip", "/public.rar":
+		if (req.StatusCode == 200 || req.StatusCode == 206) && (strings.Contains(req.Header.Get("Content-Type"), "application/zip") || strings.Contains(req.Header.Get("Content-Type"), "application/octet-stream")) {
+			technologies = append(technologies, fmt.Sprintf("Find-backup：%s", req.RequestUrl))
 		}
 	}
 

@@ -433,7 +433,7 @@ func POCcheck(wappalyzertechnologies []string, URL string, finalURL string, chec
 				technologies = append(technologies, "GoPOC_api_ivms_file_uplaod_rce|海康威视综合安防管理平台文件上传漏洞|复现参考链接：https://mp.weixin.qq.com/s/Wveo0X3857mBWFzNOcJHJw")
 			}
 			if HIKVISION.Hikvision_svm_api_files_rce(URL) {
-				technologies = append(technologies, "GoPOC_svm_api_ivms_file_uplaod_rce|海康威视综合安防管理平台文件上传漏洞")
+				technologies = append(technologies, "GoPOC_svm_api_ivms_file_uplaod_rce|海康威视综合安防管理平台文件上传漏洞|复现参考链接:https://mp.weixin.qq.com/s/pcnyxB0HAr5bYpejI0GP2w")
 
 			}
 			if HIKVISION.HIKVISION_ZHAFGL_Fastjson_RCE_nodns(URL) {
